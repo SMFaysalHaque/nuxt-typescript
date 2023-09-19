@@ -15,11 +15,10 @@
 </template>
 
 <script lang="ts">
-const category = ref("")
     export default {
         data() {
             return {
-                // category: '',
+                category: '',
                 router: {} as object,
                 restaurants: [
                     {
@@ -63,7 +62,6 @@ const category = ref("")
         },
         mounted () {
             this.router = useRouter();
-            console.log('rrr',this.router);
         },
         methods: {
             categoryDetail(_id: number) {

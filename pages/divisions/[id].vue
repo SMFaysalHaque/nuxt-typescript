@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const { id }: { id: number }  = route.params;
+const { id }  = route.params;
 // const { id } = useRoute().params
 const infos: {name: string, _id: number, imageUrl: string, description: string} [] = [
     {

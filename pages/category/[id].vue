@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts">
-// import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
     export default {
         data() {
             return {
-                category: '',
+                id: 0 as number,
                 router:  {} as object,
                 restaurants: [
                     {
@@ -62,8 +62,8 @@
             }
         },
         mounted () {
-            this.router = useRoute();
-            const { id }: { id: number }  = useRoute().params;
+            this.id = Number(useRoute().params.id)
+            console.log(this.id);
         }
     }
 </script>

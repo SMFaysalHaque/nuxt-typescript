@@ -16,9 +16,7 @@
 
 <script setup lang="ts">
 const divisions = ref("")
-console.log('divisions', divisions);
 const router = useRouter()
-console.log('ROUTER', router);
 const divisionDetail = (_id:number) => {
     // console.log(id);
     router.push(`/divisions/${_id}`)
