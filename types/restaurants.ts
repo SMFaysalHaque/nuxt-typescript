@@ -1,4 +1,4 @@
-type TInfo: {
+export type restaurants = {
     name: string,
     _id: number,
     imageUrl: string,

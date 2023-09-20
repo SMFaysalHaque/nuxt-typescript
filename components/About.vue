@@ -15,11 +15,12 @@
 </template>
 
 <script lang="ts">
+import { restaurants } from '../types/restaurants'
     export default {
         data() {
             return {
                 category: '',
-                router: {} as object,
+                router: {} as any,
                 restaurants: [
                     {
                         name: "Roshona Bilas",

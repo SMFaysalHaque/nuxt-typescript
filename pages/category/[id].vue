@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { useRoute } from 'vue-router'
+// import { useRoute } from 'vue-router'
     export default {
         data() {
             return {
@@ -63,7 +63,6 @@ import { useRoute } from 'vue-router'
         },
         mounted () {
             this.id = Number(useRoute().params.id)
-            console.log(this.id);
         }
     }
 </script>
