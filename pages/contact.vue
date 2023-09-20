@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <div class="w-6/12 mx-auto">
-            <About />
+            <Contact />
         </div>
     </div>
 </template>

@@ -15,12 +15,11 @@
 </template>
 
 <script lang="ts">
-// import { useRoute } from 'vue-router'
+import { restaurant } from '../../types/restaurants'
     export default {
         data() {
             return {
                 id: 0 as number,
-                router:  {} as object,
                 restaurants: [
                     {
                         name: "Roshona Bilas",
@@ -58,7 +57,7 @@
                         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos fugiat voluptates cum totam, nihil hic quia. Natus molestiae nulla saepe!",
                         _id: 6
                     }
-                ]
+                ] as restaurant[]
             }
         },
         mounted () {

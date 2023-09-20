@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <div class="w-6/12 mx-auto">
-            <Division />
+            <Restaurant />
         </div>
     </div>
 </template>
@@ -13,6 +13,6 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

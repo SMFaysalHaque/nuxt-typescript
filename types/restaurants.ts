@@ -1,4 +1,4 @@
-export type restaurants = {
+export type restaurant = {
     name: string,
     _id: number,
     imageUrl: string,

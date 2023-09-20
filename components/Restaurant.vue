@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts">
-import { restaurants } from '../types/restaurants'
+import { restaurant } from '../types/restaurants'
     export default {
         data() {
             return {
-                category: '',
+                restaurant: '' as string,
                 router: {} as any,
                 restaurants: [
                     {
@@ -58,15 +58,16 @@ import { restaurants } from '../types/restaurants'
                         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos fugiat voluptates cum totam, nihil hic quia. Natus molestiae nulla saepe!",
                         _id: 6
                     }
-                ]
+                ] as restaurant[]
             }
         },
         mounted () {
+            //this.router = this.$router; //this is another way to assign router
             this.router = useRouter();
         },
         methods: {
             categoryDetail(_id: number) {
-                this.router.push(`/category/${_id}`)
+                this.router.push(`/restaurant/${_id}`)
             }
         },
     }
