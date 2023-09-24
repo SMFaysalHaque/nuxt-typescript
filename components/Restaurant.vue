@@ -1,14 +1,14 @@
 <template>
     <div>
         <div class="grid md:grid-cols-2 grid-cols-1">
-            <div v-for="(restaurant, index) in restaurants" :key="index" class="mb-2">
-            <div class="flex">
+            <div v-for="(restaurant, index) in restaurants" :key="index" class="mb-2 p-1">
+            <div class="flex text-xl font-medium mb-2">
                 <p>{{ restaurant._id }}.</p>
                 <p class="ml-1">Restaurants: {{ restaurant.name }}</p>
             </div>
-            <img :src="restaurant.imageUrl" alt="" class="w-11/12 h-fit">
-            <p>{{ restaurant.description }}</p>
-            <button class="border border-blue-400 px-5 py-1 hover:bg-blue-400 rounded-md" @click="categoryDetail(restaurant._id)">Details</button>
+            <img :src="restaurant.imageUrl" alt="" class="w-11/12 h-72 object-fill mb-2 rounded-md">
+            <p class="text-[#6B7280] mb-2 line-clamp-2">{{ restaurant.description }}</p>
+            <button class="border border-blue-400 px-5 py-1 hover:bg-blue-500 hover:text-white hover:font-medium transform duration-500 rounded-md" @click="category(restaurant._id)">Details</button>
         </div>
         </div>
     </div>
@@ -66,7 +66,7 @@ import { restaurant } from '../types/restaurants'
             this.router = useRouter();
         },
         methods: {
-            categoryDetail(_id: number) {
+            category(_id: number) {
                 this.router.push(`/restaurant/${_id}`)
             }
         },
