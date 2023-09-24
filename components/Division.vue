@@ -1,14 +1,14 @@
 <template>
     <div>
         <div class="grid md:grid-cols-2 grid-cols-1">
-            <div v-for="(info, index) in infos" :key="index" class="mb-2">
-            <div class="flex">
+            <div v-for="(info, index) in infos" :key="index" class="mb-2 p-1">
+            <div class="flex text-xl font-medium mb-2">
                 <p>{{ info._id }}.</p>
                 <p class="ml-1">Division: {{ info.name }}</p>
             </div>
-            <img :src="info.imageUrl" alt="" class="w-11/12 h-fit">
-            <p>{{ info.description }}</p>
-            <button class="border border-blue-400 px-5 py-1 hover:bg-blue-400 rounded-md" @click="divisionDetail(info._id)">Details</button>
+            <img :src="info.imageUrl" alt="" class="w-11/12 h-72 object-fill mb-2 rounded-md">
+            <p class="text-[#6B7280] mb-2 line-clamp-2">{{ info.description }}</p>
+            <button class="border border-blue-400 px-5 py-1 hover:bg-blue-500 hover:text-white hover:font-medium transform duration-500 rounded-md" @click="divisionDetail(info._id)">Details</button>
         </div>
         </div>
     </div>
