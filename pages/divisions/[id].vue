@@ -2,12 +2,12 @@
     <div>
         <Navbar />
         <div class="w-6/12 mx-auto">
-            <p>Division Id: {{ id }}</p>
-            <div v-for="(info, ind) in infos" :key="ind">
+            <!-- <p>Division Id: {{ id }}</p> -->
+            <div v-for="(info, ind) in infos" :key="ind" class="my-5">
                 <div v-if="info._id == id">
-                    <p>Division: {{ info._id }}</p>
-                    <img :src="info.imageUrl" alt="" class="w-full h-fit">
-                    <p>{{ info.description }}</p>
+                    <p class="text-xl font-medium mb-2">Division: {{ info.name }}</p>
+                    <img :src="info.imageUrl" alt="" class="w-full h-fit object-fill mb-2 rounded-md">
+                    <p class="text-[#6B7280] mb-2">{{ info.description }}</p>
                 </div>
             </div>
         </div>
